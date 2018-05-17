@@ -9,13 +9,9 @@ const TEST_DATA = {
     "Country"
   ],
   data: (rowCount) => {
-    let rows = [];
-    for (let i = 0; i < rowCount; i++) {
-      if (i === 100) {
-        rows.push(["Amazing", "Last", "Rowq"]);  
-      } else
-        rows.push(["Jake", "Smitch", "USA"]);
-    }
+    const rows = Array(rowCount).fill().map(() => {
+      return ["Jake", "Smitch", "USA"]
+    })
     return [
       ...rows
     ];
