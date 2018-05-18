@@ -17,6 +17,11 @@ export default class ResultsGrid extends React.Component {
     );
   }
 
+  componentDidUpdate() {
+    const { test } = this.props;
+    console.log('Results Grid Updated! ' + test);
+  }
+
   render() {
     const {columnNames, data} = this.props;
     
